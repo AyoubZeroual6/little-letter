@@ -209,7 +209,7 @@ input:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
   </section>
 
 <section class="screen" id="s-when" aria-labelledby="title-when" inert aria-hidden="true"><div class="card"><p class="label">For you, Ayouya</p><div class="mascot small" aria-hidden="true"></div><h1 class="title" id="title-when" tabindex="-1">A little date?</h1><p class="subtitle">I finish at 18:00. You finish at 19:00.
-We could make a little time for us.</p><div class="options" id="when" role="radiogroup" aria-label="When shall we meet?"></div><p class="subtitle">Saturday, I have class from 14:00 to 18:30. My notebook gets that date. 📚</p><p class="subtitle">Pick what feels good. We can always change the plan.</p><p class="error" id="error-when" role="status"></p><button class="btn btn-yes btn-block" id="next-when" type="button">Next</button><button class="link-btn" type="button" id="back-when">← back</button></div></section><section class="screen" id="s-tonight" aria-labelledby="title-tonight" inert aria-hidden="true"><div class="card"><p class="label">Friday, 18 September</p><h1 class="title" id="title-tonight" tabindex="-1">Tonight at 19:00</h1><p class="subtitle">Work is done. What sounds good?</p><div class="options" id="tonight" role="radiogroup" aria-label="What shall we do tonight?"></div><div id="place-panel" class="field" hidden><p id="place-heading">Who picks the place?</p><div class="options" id="place" role="radiogroup" aria-label="Who picks the place?"></div><div class="field" id="custom-panel" hidden><label for="custom-place">Where would you like to go?</label><input id="custom-place" type="text" maxlength="40" autocomplete="off" aria-describedby="place-help error-tonight"><small id="place-help">A place name, up to 40 characters.</small></div></div><p class="error" id="error-tonight" role="status"></p><button class="btn btn-yes btn-block" id="next-tonight" type="button">Next</button><button class="link-btn" type="button" id="back-tonight">← back</button></div></section><section class="screen" id="s-sunday" aria-labelledby="title-sunday" inert aria-hidden="true"><div class="card"><p class="label">Sunday, 20 September</p><h1 class="title" id="title-sunday" tabindex="-1">A little beach date</h1><p class="subtitle">Sea air and you. Yes, please.</p><div class="field"><label for="sunday-time">What time works for you?</label><input id="sunday-time" type="time" required step="60" aria-describedby="sunday-help error-sunday"><small id="sunday-help">I put 16:00 here to start. Any time you like.</small></div><p class="error" id="error-sunday" role="status"></p><button class="btn btn-yes btn-block" id="next-sunday" type="button">See our plan</button><button class="link-btn" type="button" id="back-sunday">← back</button></div></section><section class="screen" id="s-final" aria-labelledby="title-final" inert aria-hidden="true"><div class="card"><p class="label">Our little plan</p><div class="mascot small" aria-hidden="true"></div><h1 class="title" id="title-final" tabindex="-1">That sounds lovely ♡</h1><div class="recap" id="recap"></div><p class="subtitle">A little time together. That is the whole idea.</p><a class="btn btn-wa btn-block" id="btn-wa" target="_blank" rel="noopener">Open my plan in WhatsApp</a><p class="subtitle">Choose the contact, then send when you are ready.</p><p class="closing">The envelope has done its job. 💌</p><p class="signature">♥ Ayoub</p><button class="link-btn" type="button" id="back-final">← back</button><button class="link-btn" id="btn-replay" type="button">replay the letter</button></div></section></main><canvas id="fx" aria-hidden="true"></canvas><svg width="0" height="0" style="position:absolute" aria-hidden="true">
+We could make a little time for us.</p><div class="options" id="when" role="radiogroup" aria-label="When shall we meet?"></div><p class="subtitle">Saturday, I have class from 14:00 to 18:30. My notebook gets that date. 📚</p><p class="subtitle">Pick what feels good. We can always change the plan.</p><p class="error" id="error-when" role="status"></p><button class="btn btn-yes btn-block" id="next-when" type="button">Next</button><button class="link-btn" type="button" id="back-when">← back</button></div></section><section class="screen" id="s-tonight" aria-labelledby="title-tonight" inert aria-hidden="true"><div class="card"><p class="label">Friday, 18 September</p><h1 class="title" id="title-tonight" tabindex="-1">Tonight at 19:00</h1><p class="subtitle">Work is done. What sounds good?</p><div class="options" id="tonight" role="radiogroup" aria-label="What shall we do tonight?"></div><div id="place-panel" class="field" hidden><p id="place-heading">What sounds good outside?</p><div class="options" id="place" role="radiogroup" aria-label="What sounds good outside?"></div><div class="field" id="custom-panel" hidden><label for="custom-place">Where and what would you like?</label><input id="custom-place" type="text" maxlength="40" autocomplete="off" aria-describedby="place-help error-tonight"><small id="place-help">Your little plan, up to 40 characters.</small></div></div><div id="ride-panel" class="field" hidden><p id="ride-heading">Chauffeur or no chauffeur?</p><div class="options" id="ride" role="radiogroup" aria-labelledby="ride-heading"></div></div><p class="error" id="error-tonight" role="status"></p><button class="btn btn-yes btn-block" id="next-tonight" type="button">Next</button><button class="link-btn" type="button" id="back-tonight">← back</button></div></section><section class="screen" id="s-sunday" aria-labelledby="title-sunday" inert aria-hidden="true"><div class="card"><p class="label">Sunday, 20 September</p><h1 class="title" id="title-sunday" tabindex="-1">A little beach date</h1><p class="subtitle">Sea air and you. Yes, please.</p><div class="field"><label for="sunday-time">What time works for you?</label><input id="sunday-time" type="time" required step="60" aria-describedby="sunday-help error-sunday"><small id="sunday-help">I put 16:00 here to start. Any time you like.</small></div><p class="error" id="error-sunday" role="status"></p><button class="btn btn-yes btn-block" id="next-sunday" type="button">See our plan</button><button class="link-btn" type="button" id="back-sunday">← back</button></div></section><section class="screen" id="s-final" aria-labelledby="title-final" inert aria-hidden="true"><div class="card"><p class="label">Our little plan</p><div class="mascot small" aria-hidden="true"></div><h1 class="title" id="title-final" tabindex="-1">That sounds lovely ♡</h1><div class="recap" id="recap"></div><p class="subtitle">A little time together. That is the whole idea.</p><a class="btn btn-wa btn-block" id="btn-wa" target="_blank" rel="noopener">Open my plan in WhatsApp</a><p class="subtitle">Choose the contact, then send when you are ready.</p><p class="closing">The envelope has done its job. 💌</p><p class="signature">♥ Ayoub</p><button class="link-btn" type="button" id="back-final">← back</button><button class="link-btn" id="btn-replay" type="button">replay the letter</button></div></section></main><canvas id="fx" aria-hidden="true"></canvas><svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></symbol>
 </svg>
 
@@ -218,7 +218,7 @@ const CONFIG = {
   tonight: { date: "2026-09-18", time: "19:00" },
   sunday: { date: "2026-09-20", defaultTime: "16:00" }
 };
-const KEY = "little-letter-3-v1";
+const KEY = "little-letter-3-v2";
 const $ = s => document.querySelector(s);
 const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const HEART_D = "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z";
@@ -369,27 +369,33 @@ const choices = {
     {id:"both", emoji:"💕", title:"Both", detail:"A little tonight, a little Sunday.", note:"My favorite 🙈"}
   ],
   tonight: [
-    {id:"home", emoji:"🏠", title:"Home date", detail:"We rest. The sofa has plans for us."},
+    {id:"out", emoji:"✨", title:"Go somewhere", detail:"A little change of scenery."},
     {id:"loulou", emoji:"🐾", title:"Take Loulou to the beach", detail:"Tiny white paws. Big beach plans."},
-    {id:"out", emoji:"✨", title:"Go somewhere", detail:"A little change of scenery."}
+    {id:"home", emoji:"🏠", title:"Home date", detail:"We rest. The sofa has plans for us."}
   ],
   place: [
-    {id:"surprise", emoji:"🎁", title:"You pick the place", detail:"Surprise me, Ayoub."},
-    {id:"custom", emoji:"📍", title:"I will write the place", detail:"I have somewhere in mind."}
+    {id:"sandwich", emoji:"🥪", title:"Tuna sandwich by the beach", detail:"We grab one and eat it by the beach.", note:"Sea air on the side"},
+    {id:"cafe", emoji:"☕", title:"Try a new café", detail:"Ayoub picks a new café for us."},
+    {id:"custom", emoji:"📍", title:"I will write my little plan", detail:"Where to go and what to do. Your choice."},
+    {id:"surprise", emoji:"🎁", title:"A total surprise", detail:"Ayoub picks. You come along.", note:"Mystery date mode"}
+  ],
+  ride: [
+    {id:"pickup", emoji:"🚗", title:"I pick you up", detail:"At 19:00, when you finish work. Your car stays there. I drive you back to it later.", note:"Chauffeur Ayoub, at your service"},
+    {id:"drive", emoji:"🚙", title:"You drive over", detail:"You come with your car. We rest together.", note:"The sofa saved you a spot"}
   ]
 };
-function fresh(){return {screen:"envelope",when:"",tonight:"",place:"",custom:"",time:CONFIG.sunday.defaultTime};}
+function fresh(){return {screen:"envelope",when:"",tonight:"",place:"",ride:"",custom:"",time:CONFIG.sunday.defaultTime};}
 let state=fresh();
 const validChoice=(key,value)=>choices[key].some(x=>x.id===value);
 const validTime=value=>typeof value==="string" && /^(?:[01]\d|2[0-3]):[0-5]\d$/.test(value);
 const hasTonight=()=>state.when==="tonight"||state.when==="both";
 const hasSunday=()=>state.when==="sunday"||state.when==="both";
-const tonightValid=()=>validChoice("tonight",state.tonight)&&(state.tonight!=="out" || (validChoice("place",state.place)&&(state.place!=="custom"||state.custom.trim().length>0)));
+const tonightValid=()=>validChoice("tonight",state.tonight)&&(state.tonight!=="home"||validChoice("ride",state.ride))&&(state.tonight!=="out" || (validChoice("place",state.place)&&(state.place!=="custom"||state.custom.trim().length>0)));
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
 try{
  const saved=JSON.parse(localStorage.getItem(KEY));
  if(saved && typeof saved==="object"){
-  for(const k of ["when","tonight","place"])if(validChoice(k,saved[k]))state[k]=saved[k];
+  for(const k of ["when","tonight","place","ride"])if(validChoice(k,saved[k]))state[k]=saved[k];
   if(typeof saved.custom==="string")state.custom=saved.custom.slice(0,40);
   if(validTime(saved.time))state.time=saved.time;
   if(["envelope","when","tonight","sunday","final"].includes(saved.screen))state.screen=saved.screen;
@@ -413,7 +419,7 @@ function renderChoices(key){
   for(const [tag,value] of [["strong",item.title],["small",item.detail],["em",item.note]])if(value){const el=document.createElement(tag);el.textContent=value;text.append(el);}
   const check=document.createElement("span");check.className="opt-check";check.setAttribute("aria-hidden","true");check.textContent="✓";
   b.append(icon,text,check);box.append(b);
-  b.addEventListener("click",()=>{state[key]=item.id;sync();save();haptic();$("#error-"+(key==="place"?"tonight":key)).textContent="";});
+  b.addEventListener("click",()=>{state[key]=item.id;sync();save();haptic();$("#error-"+(key==="place"||key==="ride"?"tonight":key)).textContent="";});
   b.addEventListener("keydown",e=>{
    const buttons=[...box.children];let i=buttons.indexOf(b);
    if(["ArrowRight","ArrowDown"].includes(e.key))i=(i+1)%buttons.length;
@@ -429,15 +435,21 @@ function sync(){
   buttons.forEach((b,i)=>{const selected=b.dataset.value===state[key];b.setAttribute("aria-checked",String(selected));b.tabIndex=selected||(!state[key]&&i===0)?0:-1;});
  }
  $("#place-panel").hidden=state.tonight!=="out";
+ $("#ride-panel").hidden=state.tonight!=="home";
  const custom=state.tonight==="out"&&state.place==="custom";
  $("#custom-panel").hidden=!custom;$("#custom-place").required=custom;$("#custom-place").disabled=!custom;
  $("#next-tonight").textContent=hasSunday()?"Next":"See our plan";
 }
 function dateLabel(date){const [y,m,d]=date.split("-").map(Number);return new Intl.DateTimeFormat("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric",timeZone:"UTC"}).format(new Date(Date.UTC(y,m-1,d)));}
 function tonightPlan(){
- if(state.tonight==="home")return "Home date. Let's rest together.";
+ if(state.tonight==="home")return "Home date. Let's rest together.\n"+(state.ride==="pickup"
+  ?"Ayoub, pick me up at 19:00 when I finish work. My car stays at work. You drive me back to it later."
+  :"I'll drive over with my car.");
  if(state.tonight==="loulou")return "Let's take Loulou to the beach.";
- return state.place==="surprise"?"Let's go somewhere. You pick the place. Surprise me!":"Let's go to: "+state.custom.trim();
+ if(state.place==="sandwich")return "Let's grab a tuna sandwich and eat it by the beach.";
+ if(state.place==="cafe")return "Let's try a new café. Ayoub picks it.";
+ if(state.place==="surprise")return "A total surprise. Ayoub picks the plan. I'll come along!";
+ return "My little plan: "+state.custom.trim();
 }
 function planParts(){
  const parts=[];
@@ -472,8 +484,9 @@ $("#sunday-time").addEventListener("input",e=>{state.time=e.target.value;e.targe
 $("#next-when").addEventListener("click",()=>{if(!state.when)return error("when","Pick tonight, Sunday, or both.");show(hasTonight()?"tonight":"sunday");});
 $("#next-tonight").addEventListener("click",()=>{
  if(!state.tonight)return error("tonight","Pick a little plan for tonight.");
- if(state.tonight==="out"&&!state.place)return error("tonight","Who would you like to pick the place?");
- if(state.tonight==="out"&&state.place==="custom"&&!state.custom.trim())return error("tonight","Write a place so I know where to meet you.",$("#custom-place"));
+ if(state.tonight==="home"&&!state.ride)return error("tonight","Pick a ride for our home date.");
+ if(state.tonight==="out"&&!state.place)return error("tonight","Pick a little plan for going out.");
+ if(state.tonight==="out"&&state.place==="custom"&&!state.custom.trim())return error("tonight","Write where you want to go and what you want to do.",$("#custom-place"));
  show(hasSunday()?"sunday":"final");
 });
 $("#next-sunday").addEventListener("click",()=>{if(!validTime(state.time))return error("sunday","Choose a time for Sunday.",$("#sunday-time"));show("final");});
