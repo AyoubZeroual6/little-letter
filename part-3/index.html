@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffe6ee">
+<meta name="robots" content="noindex, nofollow">
+<title>Letter #3 💌</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="A third little letter 💌">
+<meta property="og:description" content="Open it 🙈">
+<meta property="og:url" content="https://ayoubzeroual6.github.io/little-letter/part-3/">
+<meta property="og:image" content="https://ayoubzeroual6.github.io/little-letter/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#4a2338;
+  --ink-soft:#8d5f75;
+  --pink:#ff5d8f;
+  --pink-deep:#e2437a;
+  --pink-soft:#ffc2d4;
+  --pink-line:#ffd6e2;
+  --pink-pale:#ffe3ec;
+  --paper:#fffdfb;
+  --round:"Fredoka", ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hand:"Caveat", "Bradley Hand", "Segoe Print", cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{color-scheme:light;-webkit-text-size-adjust:100%;height:100%}
+body{
+  height:100%;
+  font-family:var(--round);
+  color:var(--ink);
+  background-color:#fff4f6;
+  background-image:radial-gradient(120% 70% at 50% -10%, #ffdbe6 0%, rgba(255,219,230,0) 60%),
+                   radial-gradient(90% 60% at 100% 110%, #ffe9dc 0%, rgba(255,233,220,0) 60%);
+  overflow:hidden;
+  overscroll-behavior:none;
+  -webkit-tap-highlight-color:transparent;
+}
+button,a{font:inherit;color:inherit;border:0;background:none;cursor:pointer;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+[tabindex="-1"]:focus{outline:none}
+button:focus-visible,a:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+
+/* ---------- floating hearts ---------- */
+.bg-hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.bg-hearts span{position:absolute;bottom:-40px;width:var(--s);height:var(--s);color:var(--pink-soft);animation:floatUp linear infinite}
+.bg-hearts svg{width:100%;height:100%;fill:currentColor}
+@keyframes floatUp{
+  0%{transform:translate(0,0) rotate(-10deg)}
+  50%{transform:translate(14px,-55vh) rotate(8deg)}
+  100%{transform:translate(-8px,-115vh) rotate(-6deg)}
+}
+
+/* ---------- screens ---------- */
+.screen{
+  position:fixed;inset:0;z-index:1;
+  display:flex;flex-direction:column;align-items:center;
+  padding:max(22px, env(safe-area-inset-top)) max(18px, env(safe-area-inset-right)) max(26px, env(safe-area-inset-bottom)) max(18px, env(safe-area-inset-left));
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  opacity:0;visibility:hidden;transform:translateY(20px) scale(.98);
+  transition:opacity .45s ease, transform .6s cubic-bezier(.2,.8,.2,1), visibility 0s linear .6s;
+}
+.screen.active{opacity:1;visibility:visible;transform:none;transition:opacity .5s ease .12s, transform .65s cubic-bezier(.2,.8,.2,1) .12s, visibility 0s}
+.screen.leaving{opacity:0;transform:translateY(-20px) scale(.98)}
+.card{width:100%;max-width:420px;margin:auto 0;display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+
+.label{display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--pink-deep);background:var(--pink-pale);padding:7px 14px;border-radius:999px}
+.title{font-size:clamp(1.9rem, 8.6vw, 2.55rem);line-height:1.08;font-weight:700;letter-spacing:-.01em;text-wrap:balance;max-width:14em}
+.subtitle{font-size:1.04rem;line-height:1.4;color:var(--ink-soft);max-width:31ch;text-wrap:balance;white-space:pre-line}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 32px;border-radius:999px;font-size:1.18rem;font-weight:600;text-decoration:none;transition:transform .18s ease, box-shadow .18s ease}
+.btn-yes{background:linear-gradient(180deg,#ff7aa3,#ff4d85);color:#fff;box-shadow:0 7px 0 #d23a6b, 0 14px 26px rgba(226,67,122,.32)}
+.btn-yes:active{transform:translateY(4px);box-shadow:0 3px 0 #d23a6b, 0 8px 16px rgba(226,67,122,.28)}
+.btn-yes.pulse{animation:pulse .5s ease}
+.btn-block{width:100%}
+.btn-wa{background:linear-gradient(180deg,#3fdc86,#20bd68);color:#fff;box-shadow:0 7px 0 #169351, 0 14px 24px rgba(32,189,104,.28)}
+.btn-wa:active{transform:translateY(4px);box-shadow:0 3px 0 #169351}
+.link-btn{font-size:.86rem;color:var(--ink-soft);text-decoration:underline;text-underline-offset:3px;padding:10px}
+@keyframes pulse{0%{transform:scale(1)}40%{transform:scale(1.09)}100%{transform:scale(1)}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-7px)}40%{transform:translateX(7px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.shake{animation:shake .45s ease}
+
+/* ---------- mascot ---------- */
+.mascot{width:128px;animation:bob 2.8s ease-in-out infinite}
+.mascot svg{display:block;width:100%;height:auto;overflow:visible}
+.mascot.small{width:104px}
+.mascot.wobble{animation:wobble .5s ease}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes wobble{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}60%{transform:rotate(6deg)}}
+
+/* ---------- 1. envelope ---------- */
+.env-stage{width:100%;display:flex;flex-direction:column;align-items:center;gap:22px}
+.envelope{position:relative;display:block;width:min(78vw,320px);aspect-ratio:29/20;margin-top:clamp(84px,30vw,128px);filter:drop-shadow(0 16px 22px rgba(226,67,122,.22))}
+.envelope:not(.open){animation:wiggle 3.6s ease-in-out infinite}
+.env-back,.env-front{position:absolute;inset:0;width:100%;height:100%;display:block}
+.env-back{z-index:1}
+.letter{position:absolute;left:7%;right:7%;top:5%;height:88%;z-index:2;transition:transform .85s cubic-bezier(.2,.8,.2,1) .45s}
+.letter-paper{width:100%;height:100%;background:var(--paper);border:2px solid var(--pink-line);border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:8px;padding:9% 10% 0}
+.letter-to{font-family:var(--hand);font-weight:700;font-size:1.55rem;line-height:1}
+.letter-line{display:block;width:78%;height:6px;border-radius:3px;background:var(--pink-pale)}
+.letter-line.short{width:52%}
+.letter-heart{width:22px;height:22px;fill:var(--pink)}
+.env-front{z-index:3;pointer-events:none}
+.flap{position:absolute;left:0;right:0;top:0;height:58%;z-index:4;transform-origin:50% 0;transition:transform .6s cubic-bezier(.45,0,.25,1)}
+.flap svg{display:block;width:100%;height:100%}
+.flap path{fill:#ffd2df;stroke:#f6b3c8;stroke-width:2;transition:fill .3s}
+.flap.behind{z-index:1}
+.flap.behind path{fill:#f8bfd1}
+.seal{position:absolute;left:50%;top:53%;width:58px;height:58px;margin:-29px 0 0 -29px;z-index:5;border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%,#ffa2bf,#ff5d8f 55%,#dc3d74);
+  box-shadow:0 4px 10px rgba(220,61,116,.45), inset 0 -3px 6px rgba(0,0,0,.12), inset 0 2px 3px rgba(255,255,255,.45);
+  transition:transform .35s cubic-bezier(.5,-.6,.5,1.6), opacity .3s;animation:beat 1.7s ease-in-out infinite}
+.seal svg{width:26px;height:26px;fill:#fff}
+.envelope.open .seal{animation:none;transform:scale(0) rotate(-40deg);opacity:0}
+.envelope.open .flap{transform:perspective(800px) rotateX(180deg)}
+.envelope.open .letter{transform:translateY(-60%)}
+.tap-hint{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:.84rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);transition:opacity .3s}
+.tap-hint .arrow{color:var(--pink);font-size:1.2rem;animation:nudge 1.4s ease-in-out infinite}
+.wink{font-family:var(--hand);font-weight:700;font-size:1.55rem;line-height:1.15;color:var(--pink-deep);max-width:22ch;transform:rotate(-2deg);text-wrap:balance;transition:opacity .3s}
+.env-stage.opened .tap-hint,.env-stage.opened .wink{opacity:0}
+@keyframes wiggle{0%,76%,100%{transform:rotate(0)}80%{transform:rotate(-3deg)}84%{transform:rotate(3deg)}88%{transform:rotate(-2deg)}92%{transform:rotate(1deg)}}
+@keyframes beat{0%,100%{transform:scale(1)}14%{transform:scale(1.13)}28%{transform:scale(1)}42%{transform:scale(1.08)}}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+
+/* ---------- 3. plan ---------- */
+.day-chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:2px dashed var(--pink-soft);border-radius:16px;padding:10px 16px;font-weight:600;font-size:1.02rem}
+.section-label{margin-top:8px;font-size:.8rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft)}
+.options{display:grid;gap:12px;width:100%}
+.opt{display:flex;align-items:center;gap:14px;width:100%;text-align:left;background:#fff;border:2.5px solid var(--pink-line);border-radius:20px;padding:13px 14px;box-shadow:0 5px 0 var(--pink-pale);transition:border-color .2s, background .2s, transform .2s, box-shadow .2s}
+.opt-emoji{flex:none;display:grid;place-items:center;width:50px;height:50px;border-radius:15px;background:#fff0f5;font-size:1.8rem}
+.opt-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
+.opt-text strong{font-size:1.08rem;font-weight:600;line-height:1.2}
+.opt-text small{font-size:.86rem;color:var(--ink-soft)}
+.opt-text em{font-style:normal;font-family:var(--hand);font-weight:700;font-size:1.15rem;line-height:1.1;color:var(--pink-deep)}
+.opt-check{flex:none;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;border:2.5px solid var(--pink-soft);color:transparent;font-size:.85rem;font-weight:700;transition:.2s}
+.opt[aria-checked="true"]{border-color:var(--pink);background:#fff6f9;box-shadow:0 5px 0 var(--pink-soft);transform:translateY(-2px)}
+.opt[aria-checked="true"] .opt-check{background:var(--pink);border-color:var(--pink);color:#fff}
+/* ---------- 4. final ---------- */
+.recap{width:100%;background:#fff;border:2.5px solid var(--pink-line);border-radius:22px;box-shadow:0 6px 0 var(--pink-pale);padding:4px 16px;text-align:left}
+.recap-row{display:flex;align-items:center;gap:14px;padding:12px 0}
+.recap-row + .recap-row{border-top:2px dashed var(--pink-pale)}
+.recap-row .opt-emoji{width:46px;height:46px;font-size:1.6rem}
+.recap-row strong{display:block;font-size:1.08rem;font-weight:600;line-height:1.2}
+.recap-row small{display:block;font-size:.88rem;color:var(--ink-soft)}
+.closing{font-family:var(--hand);font-weight:700;font-size:1.6rem;line-height:1.15;max-width:24ch;text-wrap:balance;white-space:pre-line}
+.signature{font-family:var(--hand);font-weight:700;font-size:1.5rem;color:var(--pink-deep);margin-top:-10px}
+
+#fx{position:fixed;inset:0;pointer-events:none;z-index:50}
+
+@media (prefers-reduced-motion: reduce){
+  .bg-hearts,.mascot,.envelope:not(.open),.seal,.tap-hint .arrow{animation:none!important}
+}
+
+[hidden]{display:none!important}
+:root{--ink-soft:#795166;--pink-deep:#b82f60}
+input{font:inherit;color:var(--ink);width:100%;min-height:52px;background:#fff;border:2px solid var(--pink-line);border-radius:14px;padding:12px}
+input:focus-visible{outline:3px solid var(--pink);outline-offset:3px}
+.field{width:100%;text-align:left;display:grid;gap:8px}
+.field label{font-weight:600}
+.field small{color:var(--ink-soft);font-size:.88rem}
+.error{color:#a5234e;font-size:.94rem;min-height:1.4em}
+.recap-row{align-items:flex-start;overflow-wrap:anywhere}
+.recap-row div{min-width:0}
+.recap-row small{margin-top:6px;line-height:1.5;white-space:pre-line}
+.btn-yes{background:linear-gradient(180deg,#d33468,#b92555)}
+.btn-wa{background:linear-gradient(180deg,#16884a,#116e3c)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head><body><div class="bg-hearts" aria-hidden="true"></div><main>  <!-- 1. Envelope -->
+  <section class="screen active" id="s-envelope" aria-label="Letter">
+    <div class="card">
+      <p class="label" >Letter #3</p>
+      <div class="env-stage" id="env-stage">
+        <button class="envelope" id="envelope" type="button" aria-label="Open the letter">
+          <svg class="env-back" viewBox="0 0 290 200" preserveAspectRatio="none" aria-hidden="true">
+            <rect width="290" height="200" rx="18" fill="#f7bfd0"/>
+          </svg>
+          <span class="letter" aria-hidden="true">
+            <span class="letter-paper">
+              <span class="letter-to" >For Ayouya</span>
+              <span class="letter-line"></span>
+              <span class="letter-line short"></span>
+              <svg class="letter-heart" viewBox="0 0 24 24"><use href="#heart"/></svg>
+            </span>
+          </span>
+          <svg class="env-front" viewBox="0 0 290 200" preserveAspectRatio="none" aria-hidden="true">
+            <defs><clipPath id="env-clip"><rect width="290" height="200" rx="18"/></clipPath></defs>
+            <g clip-path="url(#env-clip)">
+              <path d="M0 0 L145 108 L290 0 V200 H0 Z" fill="#ffe3eb"/>
+              <path d="M2 198 L128 100 M288 198 L162 100" stroke="#f9c5d5" stroke-width="3" stroke-linecap="round" fill="none"/>
+            </g>
+          </svg>
+          <span class="flap" id="flap" aria-hidden="true">
+            <svg viewBox="0 0 290 116" preserveAspectRatio="none"><path d="M18 1 H272 Q289 1 289 18 L160 106 Q145 116 130 106 L1 18 Q1 1 18 1 Z"/></svg>
+          </span>
+          <span class="seal" id="seal" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#heart"/></svg></span>
+        </button>
+        <p class="tap-hint"><span class="arrow" aria-hidden="true">↑</span><span >Tap the heart to open</span></p>
+        <p class="wink" >Third letter. Still no stamp. 🙈</p>
+      </div>
+    </div>
+  </section>
+
+<section class="screen" id="s-when" aria-labelledby="title-when" inert aria-hidden="true"><div class="card"><p class="label">For you, Ayouya</p><div class="mascot small" aria-hidden="true"></div><h1 class="title" id="title-when" tabindex="-1">A little date?</h1><p class="subtitle">I finish at 18:00. You finish at 19:00.
+We could make a little time for us.</p><div class="options" id="when" role="radiogroup" aria-label="When shall we meet?"></div><p class="subtitle">Saturday, I have class from 14:00 to 18:30. My notebook gets that date. 📚</p><p class="subtitle">Pick what feels good. We can always change the plan.</p><p class="error" id="error-when" role="status"></p><button class="btn btn-yes btn-block" id="next-when" type="button">Next</button><button class="link-btn" type="button" id="back-when">← back</button></div></section><section class="screen" id="s-tonight" aria-labelledby="title-tonight" inert aria-hidden="true"><div class="card"><p class="label">Friday, 18 September</p><h1 class="title" id="title-tonight" tabindex="-1">Tonight at 19:00</h1><p class="subtitle">Work is done. What sounds good?</p><div class="options" id="tonight" role="radiogroup" aria-label="What shall we do tonight?"></div><div id="place-panel" class="field" hidden><p id="place-heading">Who picks the place?</p><div class="options" id="place" role="radiogroup" aria-label="Who picks the place?"></div><div class="field" id="custom-panel" hidden><label for="custom-place">Where would you like to go?</label><input id="custom-place" type="text" maxlength="40" autocomplete="off" aria-describedby="place-help error-tonight"><small id="place-help">A place name, up to 40 characters.</small></div></div><p class="error" id="error-tonight" role="status"></p><button class="btn btn-yes btn-block" id="next-tonight" type="button">Next</button><button class="link-btn" type="button" id="back-tonight">← back</button></div></section><section class="screen" id="s-sunday" aria-labelledby="title-sunday" inert aria-hidden="true"><div class="card"><p class="label">Sunday, 20 September</p><h1 class="title" id="title-sunday" tabindex="-1">A little beach date</h1><p class="subtitle">Sea air and you. Yes, please.</p><div class="field"><label for="sunday-time">What time works for you?</label><input id="sunday-time" type="time" required step="60" aria-describedby="sunday-help error-sunday"><small id="sunday-help">I put 16:00 here to start. Any time you like.</small></div><p class="error" id="error-sunday" role="status"></p><button class="btn btn-yes btn-block" id="next-sunday" type="button">See our plan</button><button class="link-btn" type="button" id="back-sunday">← back</button></div></section><section class="screen" id="s-final" aria-labelledby="title-final" inert aria-hidden="true"><div class="card"><p class="label">Our little plan</p><div class="mascot small" aria-hidden="true"></div><h1 class="title" id="title-final" tabindex="-1">That sounds lovely ♡</h1><div class="recap" id="recap"></div><p class="subtitle">A little time together. That is the whole idea.</p><a class="btn btn-wa btn-block" id="btn-wa" target="_blank" rel="noopener">Open my plan in WhatsApp</a><p class="subtitle">Choose the contact, then send when you are ready.</p><p class="closing">The envelope has done its job. 💌</p><p class="signature">♥ Ayoub</p><button class="link-btn" type="button" id="back-final">← back</button><button class="link-btn" id="btn-replay" type="button">replay the letter</button></div></section></main><canvas id="fx" aria-hidden="true"></canvas><svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="heart" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></symbol>
+</svg>
+
+<script>
+const CONFIG = {
+  tonight: { date: "2026-09-18", time: "19:00" },
+  sunday: { date: "2026-09-20", defaultTime: "16:00" }
+};
+const KEY = "little-letter-3-v1";
+const $ = s => document.querySelector(s);
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const HEART_D = "M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z";
+const haptic = () => { try { navigator.vibrate && navigator.vibrate(12); } catch (e) {} };
+const rand = (a, b) => a + Math.random() * (b - a);
+
+/* ---------- background hearts ---------- */
+(() => {
+  const bg = $(".bg-hearts");
+  const n = reduced ? 0 : 14;
+  for (let i = 0; i < n; i++) {
+    const s = document.createElement("span");
+    s.style.left = rand(0, 96) + "%";
+    s.style.setProperty("--s", rand(12, 28).toFixed(0) + "px");
+    s.style.opacity = rand(0.25, 0.6).toFixed(2);
+    s.style.animationDuration = rand(10, 20).toFixed(1) + "s";
+    s.style.animationDelay = (-rand(0, 20)).toFixed(1) + "s";
+    s.innerHTML = '<svg viewBox="0 0 24 24"><use href="#heart"/></svg>';
+    bg.appendChild(s);
+  }
+})();
+
+/* ---------- mascot ---------- */
+function mascot(kind, mood) {
+  const O = "#4a2338", body = kind === "bear" ? "#f3cba8" : "#ffffff", inner = "#ffb3c8";
+  const sw = 'stroke="' + O + '" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"';
+  let ears = "";
+  if (kind === "bear") ears =
+    `<circle cx="56" cy="58" r="21" fill="${body}" ${sw}/><circle cx="56" cy="58" r="9" fill="${inner}"/>` +
+    `<circle cx="144" cy="58" r="21" fill="${body}" ${sw}/><circle cx="144" cy="58" r="9" fill="${inner}"/>`;
+  if (kind === "cat") ears =
+    `<path d="M50 86 L56 30 L98 58 Z" fill="${body}" ${sw}/><path d="M62 70 L65 46 L84 58 Z" fill="${inner}"/>` +
+    `<path d="M150 86 L144 30 L102 58 Z" fill="${body}" ${sw}/><path d="M138 70 L135 46 L116 58 Z" fill="${inner}"/>`;
+  if (kind === "bunny") ears =
+    `<g transform="rotate(-10 78 44)"><ellipse cx="78" cy="22" rx="16" ry="42" fill="${body}" ${sw}/><ellipse cx="78" cy="26" rx="6.5" ry="27" fill="${inner}"/></g>` +
+    `<g transform="rotate(10 122 44)"><ellipse cx="122" cy="22" rx="16" ry="42" fill="${body}" ${sw}/><ellipse cx="122" cy="26" rx="6.5" ry="27" fill="${inner}"/></g>`;
+
+  let eyes = "";
+  if (mood === "happy") eyes = `<path d="M69 106 Q78 95 87 106 M113 106 Q122 95 131 106" fill="none" ${sw}/>`;
+  if (mood === "plead") eyes =
+    `<circle cx="78" cy="104" r="10" fill="${O}"/><circle cx="122" cy="104" r="10" fill="${O}"/>` +
+    `<circle cx="74.5" cy="100" r="3.6" fill="#fff"/><circle cx="118.5" cy="100" r="3.6" fill="#fff"/>` +
+    `<circle cx="81.5" cy="108" r="1.8" fill="#fff"/><circle cx="125.5" cy="108" r="1.8" fill="#fff"/>` +
+    `<path d="M66 88 L84 83 M134 88 L116 83" fill="none" stroke="${O}" stroke-width="4" stroke-linecap="round"/>`;
+  if (mood === "love") eyes =
+    `<path d="${HEART_D}" fill="#ff4d85" transform="translate(66 92)"/>` +
+    `<path d="${HEART_D}" fill="#ff4d85" transform="translate(110 92)"/>`;
+
+  const snout = kind === "bear" ? `<ellipse cx="100" cy="126" rx="21" ry="15" fill="#fbe4d2"/>` : "";
+  const nose = kind === "bear"
+    ? `<ellipse cx="100" cy="119" rx="7.5" ry="5.5" fill="${O}"/>`
+    : `<path d="M94.5 116 H105.5 L100 122 Z" fill="#ff7aa3" stroke="${O}" stroke-width="2.5" stroke-linejoin="round"/>`;
+  let mouth = `<path d="M91 128 Q95.5 134 100 128 Q104.5 134 109 128" fill="none" stroke="${O}" stroke-width="4" stroke-linecap="round"/>`;
+  if (mood === "plead") mouth = `<ellipse cx="100" cy="132" rx="4.5" ry="5.5" fill="${O}"/>`;
+  if (mood === "love") mouth = `<path d="M90 127 Q100 141 110 127 Z" fill="${O}" stroke="${O}" stroke-width="3" stroke-linejoin="round"/>`;
+  const whiskers = kind === "cat"
+    ? `<path d="M60 120 L38 115 M60 127 L38 130 M140 120 L162 115 M140 127 L162 130" stroke="${O}" stroke-width="3" stroke-linecap="round"/>`
+    : "";
+  const blush = `<ellipse cx="62" cy="124" rx="10" ry="6" fill="#ff8fb0" opacity=".55"/><ellipse cx="138" cy="124" rx="10" ry="6" fill="#ff8fb0" opacity=".55"/>`;
+  const heart = `<path d="${HEART_D}" fill="#ff5d8f" stroke="${O}" stroke-width="2.6" stroke-linejoin="round" transform="translate(81 158) scale(1.6)"/>`;
+  const arms = `<ellipse cx="74" cy="178" rx="13" ry="11" fill="${body}" ${sw}/><ellipse cx="126" cy="178" rx="13" ry="11" fill="${body}" ${sw}/>`;
+
+  return `<svg viewBox="0 -30 200 246" xmlns="http://www.w3.org/2000/svg">
+    <ellipse cx="100" cy="182" rx="54" ry="32" fill="${body}" ${sw}/>
+    ${ears}
+    <circle cx="100" cy="108" r="58" fill="${body}" ${sw}/>
+    ${snout}${blush}${eyes}${nose}${mouth}${whiskers}
+    ${heart}${arms}
+  </svg>`;
+}
+/* ---------- effects (hearts) ---------- */
+const fx = (() => {
+  const c = $("#fx"), ctx = c.getContext("2d"), shape = new Path2D(HEART_D);
+  const colors = ["#ff5d8f", "#ff8fb0", "#ffb3c8", "#e2437a", "#ffd1dc"];
+  let W = 0, H = 0, dpr = 1, parts = [], running = false, last = 0, acc = 0, rainUntil = 0, rainRate = 0;
+  function resize() {
+    dpr = Math.min(2, window.devicePixelRatio || 1);
+    W = innerWidth; H = innerHeight;
+    c.width = W * dpr; c.height = H * dpr;
+    c.style.width = W + "px"; c.style.height = H + "px";
+  }
+  resize();
+  addEventListener("resize", resize);
+  function start() {
+    if (running) return;
+    running = true; last = performance.now();
+    requestAnimationFrame(tick);
+  }
+  function burst(x, y, n) {
+    if (reduced) return;
+    for (let i = 0; i < n; i++) {
+      const a = rand(0, Math.PI * 2), s = rand(3, 9);
+      parts.push({ x, y, vx: Math.cos(a) * s, vy: Math.sin(a) * s - 3, g: 0.2, size: rand(10, 24), rot: rand(-0.6, 0.6), vr: rand(-0.08, 0.08), life: 1, decay: rand(0.012, 0.022), color: colors[i % colors.length] });
+    }
+    start();
+  }
+  function rain(ms, perSecond) {
+    if (reduced) return;
+    rainUntil = performance.now() + ms;
+    rainRate = reduced ? Math.min(perSecond, 2) : perSecond;
+    start();
+  }
+  function tick(now) {
+    const dt = Math.min(50, now - last) / 16.67;
+    last = now;
+    if (now < rainUntil) {
+      acc += rainRate * dt / 60;
+      while (acc >= 1) {
+        acc -= 1;
+        parts.push({ x: rand(0, W), y: -24, vx: rand(-0.3, 0.3), vy: rand(1.3, 3), g: 0.004, size: rand(10, 24), rot: rand(-0.5, 0.5), vr: rand(-0.03, 0.03), life: 1, decay: 0, sway: rand(0, 6.28), color: colors[Math.floor(rand(0, colors.length))] });
+      }
+    }
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    parts = parts.filter(p => {
+      p.vy += p.g * dt;
+      p.x += (p.vx + (p.sway !== undefined ? Math.sin(now / 650 + p.sway) * 0.45 : 0)) * dt;
+      p.y += p.vy * dt;
+      p.rot += p.vr * dt;
+      p.life -= p.decay * dt;
+      if (p.life <= 0 || p.y > H + 40) return false;
+      ctx.save();
+      ctx.globalAlpha = Math.min(1, p.life);
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rot);
+      ctx.scale(p.size / 24, p.size / 24);
+      ctx.translate(-12, -12);
+      ctx.fillStyle = p.color;
+      ctx.fill(shape);
+      ctx.restore();
+      return true;
+    });
+    if (parts.length || now < rainUntil) requestAnimationFrame(tick);
+    else { running = false; ctx.clearRect(0, 0, W, H); }
+  }
+  return { burst, rain };
+})();
+function burstFrom(el, n) {
+  const r = el.getBoundingClientRect();
+  fx.burst(r.left + r.width / 2, r.top + r.height / 2, n);
+}
+
+
+const choices = {
+  when: [
+    {id:"tonight", emoji:"🌙", title:"Tonight at 19:00", detail:"Friday, right after work."},
+    {id:"sunday", emoji:"🌊", title:"Sunday at the beach", detail:"You choose the time."},
+    {id:"both", emoji:"💕", title:"Both", detail:"A little tonight, a little Sunday.", note:"My favorite 🙈"}
+  ],
+  tonight: [
+    {id:"home", emoji:"🏠", title:"Home date", detail:"We rest. The sofa has plans for us."},
+    {id:"loulou", emoji:"🐾", title:"Take Loulou to the beach", detail:"Tiny white paws. Big beach plans."},
+    {id:"out", emoji:"✨", title:"Go somewhere", detail:"A little change of scenery."}
+  ],
+  place: [
+    {id:"surprise", emoji:"🎁", title:"You pick the place", detail:"Surprise me, Ayoub."},
+    {id:"custom", emoji:"📍", title:"I will write the place", detail:"I have somewhere in mind."}
+  ]
+};
+function fresh(){return {screen:"envelope",when:"",tonight:"",place:"",custom:"",time:CONFIG.sunday.defaultTime};}
+let state=fresh();
+const validChoice=(key,value)=>choices[key].some(x=>x.id===value);
+const validTime=value=>typeof value==="string" && /^(?:[01]\d|2[0-3]):[0-5]\d$/.test(value);
+const hasTonight=()=>state.when==="tonight"||state.when==="both";
+const hasSunday=()=>state.when==="sunday"||state.when==="both";
+const tonightValid=()=>validChoice("tonight",state.tonight)&&(state.tonight!=="out" || (validChoice("place",state.place)&&(state.place!=="custom"||state.custom.trim().length>0)));
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}}
+try{
+ const saved=JSON.parse(localStorage.getItem(KEY));
+ if(saved && typeof saved==="object"){
+  for(const k of ["when","tonight","place"])if(validChoice(k,saved[k]))state[k]=saved[k];
+  if(typeof saved.custom==="string")state.custom=saved.custom.slice(0,40);
+  if(validTime(saved.time))state.time=saved.time;
+  if(["envelope","when","tonight","sunday","final"].includes(saved.screen))state.screen=saved.screen;
+ }
+}catch(e){}
+function safeScreen(screen){
+ if(screen==="envelope"||screen==="when")return screen;
+ if(!validChoice("when",state.when))return "when";
+ if(screen==="tonight")return hasTonight()?"tonight":"sunday";
+ if(hasTonight()&&!tonightValid())return "tonight";
+ if(screen==="sunday")return hasSunday()?"sunday":"final";
+ if(hasSunday()&&!validTime(state.time))return "sunday";
+ return "final";
+}
+function renderChoices(key){
+ const box=$("#"+key);
+ choices[key].forEach(item=>{
+  const b=document.createElement("button");b.type="button";b.className="opt";b.setAttribute("role","radio");b.dataset.value=item.id;
+  const icon=document.createElement("span");icon.className="opt-emoji";icon.setAttribute("aria-hidden","true");icon.textContent=item.emoji;
+  const text=document.createElement("span");text.className="opt-text";
+  for(const [tag,value] of [["strong",item.title],["small",item.detail],["em",item.note]])if(value){const el=document.createElement(tag);el.textContent=value;text.append(el);}
+  const check=document.createElement("span");check.className="opt-check";check.setAttribute("aria-hidden","true");check.textContent="✓";
+  b.append(icon,text,check);box.append(b);
+  b.addEventListener("click",()=>{state[key]=item.id;sync();save();haptic();$("#error-"+(key==="place"?"tonight":key)).textContent="";});
+  b.addEventListener("keydown",e=>{
+   const buttons=[...box.children];let i=buttons.indexOf(b);
+   if(["ArrowRight","ArrowDown"].includes(e.key))i=(i+1)%buttons.length;
+   else if(["ArrowLeft","ArrowUp"].includes(e.key))i=(i+buttons.length-1)%buttons.length;
+   else if(e.key==="Home")i=0;else if(e.key==="End")i=buttons.length-1;else return;
+   e.preventDefault();buttons[i].click();buttons[i].focus();
+  });
+ });
+}
+function sync(){
+ for(const key of Object.keys(choices)){
+  const buttons=[...$("#"+key).children];
+  buttons.forEach((b,i)=>{const selected=b.dataset.value===state[key];b.setAttribute("aria-checked",String(selected));b.tabIndex=selected||(!state[key]&&i===0)?0:-1;});
+ }
+ $("#place-panel").hidden=state.tonight!=="out";
+ const custom=state.tonight==="out"&&state.place==="custom";
+ $("#custom-panel").hidden=!custom;$("#custom-place").required=custom;$("#custom-place").disabled=!custom;
+ $("#next-tonight").textContent=hasSunday()?"Next":"See our plan";
+}
+function dateLabel(date){const [y,m,d]=date.split("-").map(Number);return new Intl.DateTimeFormat("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric",timeZone:"UTC"}).format(new Date(Date.UTC(y,m-1,d)));}
+function tonightPlan(){
+ if(state.tonight==="home")return "Home date. Let's rest together.";
+ if(state.tonight==="loulou")return "Let's take Loulou to the beach.";
+ return state.place==="surprise"?"Let's go somewhere. You pick the place. Surprise me!":"Let's go to: "+state.custom.trim();
+}
+function planParts(){
+ const parts=[];
+ if(hasTonight())parts.push({title:dateLabel(CONFIG.tonight.date)+" at "+CONFIG.tonight.time,detail:tonightPlan(),emoji:"🌙"});
+ if(hasSunday())parts.push({title:dateLabel(CONFIG.sunday.date)+" at "+state.time,detail:"Let's go to the beach.",emoji:"🌊"});
+ return parts;
+}
+function renderFinal(){
+ const parts=planParts();$("#recap").replaceChildren();
+ parts.forEach(p=>{
+  const row=document.createElement("div");row.className="recap-row";
+  const icon=document.createElement("span");icon.className="opt-emoji";icon.setAttribute("aria-hidden","true");icon.textContent=p.emoji;
+  const text=document.createElement("div"),title=document.createElement("strong"),detail=document.createElement("small");title.textContent=p.title;detail.textContent=p.detail;text.append(title,detail);row.append(icon,text);$("#recap").append(row);
+ });
+ const intro=state.when==="both"?"Ayoub, I pick both!":state.when==="tonight"?"Ayoub, I pick tonight!":"Ayoub, I pick Sunday!";
+ const message=intro+"\n\n"+parts.map(p=>p.title+"\n"+p.detail).join("\n\n")+"\n\n♥ Ayouya";
+ $("#btn-wa").href="https://wa.me/?text="+encodeURIComponent(message);
+}
+let focusTimer;
+function show(screen,instant=false){
+ screen=safeScreen(screen);clearTimeout(focusTimer);
+ document.querySelectorAll(".screen").forEach(el=>{const active=el.id==="s-"+screen;el.classList.toggle("active",active);el.inert=!active;el.setAttribute("aria-hidden",String(!active));if(active)el.scrollTop=0;});
+ state.screen=screen;sync();save();
+ if(screen==="final"){renderFinal();fx.rain(4500,16);}
+ focusTimer=setTimeout(()=>{const el=$("#s-"+screen+" .title")||$("#envelope");el.focus({preventScroll:true});},instant||reduced?0:650);
+}
+function error(screen,text,input){$("#error-"+screen).textContent=text;if(input){input.setAttribute("aria-invalid","true");input.focus();}}
+Object.keys(choices).forEach(renderChoices);
+$("#custom-place").value=state.custom;$("#sunday-time").value=state.time;
+$("#custom-place").addEventListener("input",e=>{state.custom=e.target.value.slice(0,40);e.target.removeAttribute("aria-invalid");$("#error-tonight").textContent="";save();});
+$("#sunday-time").addEventListener("input",e=>{state.time=e.target.value;e.target.removeAttribute("aria-invalid");$("#error-sunday").textContent="";save();});
+$("#next-when").addEventListener("click",()=>{if(!state.when)return error("when","Pick tonight, Sunday, or both.");show(hasTonight()?"tonight":"sunday");});
+$("#next-tonight").addEventListener("click",()=>{
+ if(!state.tonight)return error("tonight","Pick a little plan for tonight.");
+ if(state.tonight==="out"&&!state.place)return error("tonight","Who would you like to pick the place?");
+ if(state.tonight==="out"&&state.place==="custom"&&!state.custom.trim())return error("tonight","Write a place so I know where to meet you.",$("#custom-place"));
+ show(hasSunday()?"sunday":"final");
+});
+$("#next-sunday").addEventListener("click",()=>{if(!validTime(state.time))return error("sunday","Choose a time for Sunday.",$("#sunday-time"));show("final");});
+let opening=false,openTimer,flapTimer;
+function resetEnvelope(){clearTimeout(openTimer);clearTimeout(flapTimer);opening=false;$("#envelope").classList.remove("open");$("#env-stage").classList.remove("opened");$("#flap").classList.remove("behind");}
+$("#envelope").addEventListener("click",()=>{
+ if(opening)return;opening=true;$("#envelope").classList.add("open");$("#env-stage").classList.add("opened");burstFrom($("#seal"),16);
+ flapTimer=setTimeout(()=>$("#flap").classList.add("behind"),reduced?0:300);
+ openTimer=setTimeout(()=>show("when"),reduced?0:1800);
+});
+$("#back-when").addEventListener("click",()=>{resetEnvelope();show("envelope");});
+$("#back-tonight").addEventListener("click",()=>show("when"));
+$("#back-sunday").addEventListener("click",()=>show(hasTonight()?"tonight":"when"));
+$("#back-final").addEventListener("click",()=>show(hasSunday()?"sunday":"tonight"));
+$("#btn-replay").addEventListener("click",()=>{
+ state=fresh();resetEnvelope();$("#custom-place").value="";$("#sunday-time").value=state.time;
+ document.querySelectorAll(".error").forEach(el=>el.textContent="");document.querySelectorAll("[aria-invalid]").forEach(el=>el.removeAttribute("aria-invalid"));show("envelope");
+});
+document.querySelectorAll(".mascot").forEach(el=>el.innerHTML=mascot("bear","love"));
+show(state.screen,true);
+</script></body></html>
